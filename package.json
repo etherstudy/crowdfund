@@ -13,6 +13,6 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
-    "web3": "github:ethereum/web3.js"
+    "web3": "ethereum/web3.js"
   }
 }
