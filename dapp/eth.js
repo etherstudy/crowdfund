@@ -1,5 +1,4 @@
 var constant = require('./constant.js');
-
 //------------------------
 // Web3 연결
 //------------------------
@@ -375,21 +374,27 @@ web3.eth.defaultAccount = web3.eth.accounts[0];
 // 토큰 명부 조회 (BalanceOf)
 //----------------------------
 exports.getTokenAmount = function (address) {
-   return TokenContract.balanceOf(address);
+    //+++++++  STEP 4. Get 실습 ++++++++++++
+    //return TokenContract.balanceOf(address);
+    return -1;
 };
 
 //----------------------------
 // 펀딩 명부 조회 (BalanceOf)
 //----------------------------
 exports.getFundAmount = function (address) {
-   return CrowdFundContract.balanceOf(address);
+    //+++++++  STEP 4. Get 실습 ++++++++++++
+    //return CrowdFundContract.balanceOf(address);
+    return -2;
 };
 
 //----------------------------
 // 이더 잔액 조회
 //----------------------------
 exports.getBalance = function (address) {
-    return web3.fromWei(web3.eth.getBalance(address), 'ether');
+    //+++++++  STEP 4. Get 실습 ++++++++++++
+    //return web3.fromWei(web3.eth.getBalance(address), 'ether');
+    return -3;
 };
 
 //----------------------------
@@ -411,6 +416,8 @@ exports.unlockAccount = function (from, passphase, callback) {
 // 이더 트랜잭션 수행
 //----------------------------
 exports.sendTransaction = function(from, to, value, gas, callback) {
+    //+++++++  STEP 4. SET 실습 ++++++++++++
+    /*
     web3.eth.sendTransaction({
         to: to,
         from: from,
@@ -424,12 +431,16 @@ exports.sendTransaction = function(from, to, value, gas, callback) {
             return callback(null, hash);
         }
     });
+    */
+    return callback(null, '');
 };
 
 //----------------------------
 // 이벤트 모니터링
 //----------------------------
 exports.fundTransferEvent = function( callback ) {
+    //+++++++  STEP 5. Event Watch 실습 ++++++++++++
+    /*
     CrowdFundContract.FundTransfer().watch(function(error, res){
         if (error)
         {
@@ -441,10 +452,6 @@ exports.fundTransferEvent = function( callback ) {
             return callback(null, res);
         }
     });
+    */
+    return callback(null, '');
 };
-
-
-
-
-
-
