@@ -375,8 +375,7 @@ web3.eth.defaultAccount = web3.eth.accounts[0];
 //----------------------------
 exports.getTokenAmount = function (address) {
     //+++++++  STEP 4. Get 실습 ++++++++++++
-    //return TokenContract.balanceOf(address);
-    return -1;
+    return TokenContract.balanceOf(address);
 };
 
 //----------------------------
@@ -384,8 +383,7 @@ exports.getTokenAmount = function (address) {
 //----------------------------
 exports.getFundAmount = function (address) {
     //+++++++  STEP 4. Get 실습 ++++++++++++
-    //return CrowdFundContract.balanceOf(address);
-    return -2;
+    return CrowdFundContract.balanceOf(address);
 };
 
 //----------------------------
@@ -393,8 +391,7 @@ exports.getFundAmount = function (address) {
 //----------------------------
 exports.getBalance = function (address) {
     //+++++++  STEP 4. Get 실습 ++++++++++++
-    //return web3.fromWei(web3.eth.getBalance(address), 'ether');
-    return -3;
+    return web3.fromWei(web3.eth.getBalance(address), 'ether');
 };
 
 //----------------------------
@@ -417,7 +414,6 @@ exports.unlockAccount = function (from, passphase, callback) {
 //----------------------------
 exports.sendTransaction = function(from, to, value, gas, callback) {
     //+++++++  STEP 4. SET 실습 ++++++++++++
-    /*
     web3.eth.sendTransaction({
         to: to,
         from: from,
@@ -431,8 +427,6 @@ exports.sendTransaction = function(from, to, value, gas, callback) {
             return callback(null, hash);
         }
     });
-    */
-    return callback(null, '');
 };
 
 //----------------------------
@@ -440,7 +434,7 @@ exports.sendTransaction = function(from, to, value, gas, callback) {
 //----------------------------
 exports.fundTransferEvent = function( callback ) {
     //+++++++  STEP 5. Event Watch 실습 ++++++++++++
-    /*
+
     CrowdFundContract.FundTransfer().watch(function(error, res){
         if (error)
         {
@@ -452,6 +446,4 @@ exports.fundTransferEvent = function( callback ) {
             return callback(null, res);
         }
     });
-    */
-    return callback(null, '');
 };
