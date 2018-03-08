@@ -15,6 +15,7 @@ const crowdFundContractAddress = constant.crowdFundContractAddress;
 // 스마트 컨트랙트 연결
 //------------------------
 // Token Contract
+// [주의] 현재 연결된 Geth 네트워크에 배포된 ABI로 업데이트 하세요.
 var walletTokenAbi = [
   {
     "constant": true,
@@ -144,6 +145,7 @@ var walletTokenAbi = [
 var TokenContract = web3.eth.contract(walletTokenAbi).at(TokenContractAddress);
 
 // crowdFund Contract
+// [주의] 현재 연결된 Geth 네트워크에 배포된 ABI로 변경해야 합니다.
 var crowdFundAbi = [
   {
     "constant": true,
